@@ -1,0 +1,156 @@
+/* padding y borde */
+* {
+    box-sizing: border-box;
+}
+
+/* Apariencia general */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #263445;
+    background-color: #eef2f6;
+
+}
+
+/* Encabezado principal */
+header {
+    background-color: #173b5e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Contenedor de las secciones */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Tarjetas de contenido */
+section {
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #d7e0e8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow-wrap: break-word;
+}
+
+section h2 {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dce8f3;
+    color: #173b5e;
+    font-size: 24px;
+}
+
+section p {
+    margin: 0 0 14px;
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tables */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sobre Mí */
+    main section:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Computadoras desde 1024 px */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+  
+    main section:first-child {
+        grid-column: auto;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+}
+
+/* para celulares pequeños */
+@media (max-width: 480px) {
+    header {
+        padding: 28px 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    main {
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* Formulario */
+main .contacto { grid-column: 1 / -1; }
+.nota { color: #45566b; font-size: 14px; }
+form { max-width: 700px; margin: 20px auto 0; }
+label { display: block; margin-top: 14px; font-weight: bold; }
+input, textarea {
+    display: block; width: 100%; padding: 12px; margin-top: 6px;
+    border: 1px solid #8598aa; border-radius: 6px;
+    font: inherit; color: #263445; background: #fff;
+}
+textarea { resize: vertical; min-height: 130px; }
+input:focus, textarea:focus, button:focus-visible {
+    outline: 3px solid #3575b2; outline-offset: 3px;
+}
+[aria-invalid="true"] { border-color: #a11f2b; }
+.error { display: block; color: #a11f2b; font-size: 14px; }
+button {
+    margin-top: 20px; padding: 12px 24px; border: 0; border-radius: 6px;
+    background: #173b5e; color: white; font: inherit; font-weight: bold;
+    cursor: pointer;
+}
+button:hover { background: #245581; }
+button:disabled { opacity: .7; cursor: wait; }
+#respuesta { margin-top: 18px; }
+#respuesta:empty { display: none; }
+#respuesta.exito, #respuesta.fallo { padding: 14px; border-radius: 6px; }
+.exito { background: #e7f4eb; color: #19542d; border: 1px solid #7ba88a; }
+.fallo { background: #fcecef; color: #8a1c28; border: 1px solid #c98891; }
+@media (max-width: 480px) { button { width: 100%; } }

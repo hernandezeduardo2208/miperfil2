@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Eduardo Hernandez</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Mi Perfil</h1>
+        <p>Eduardo Jose Hernandez</p>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2>Sobre Mí</h2>
+            <p>
+                Mi nombre es Eduardo Jose Hernandez. Me interesa  y me gusta la informática,
+                la tecnología. Disfruto mucho aprender nuevas cosas, mi pasa tiempo es la refrigeración y climatiazación
+           </p>
+        </section>
+
+        
+        <section>
+            <h2>Experiencia</h2>
+            <p>
+                Trabajo como administrador SAPF (Sistemas Automatizados de Proteccion Fisica) en el área de Seguridad Física de
+                PDVSA Gas Oriente desde el año 2012. Tengo experiencia en servidores, videovigilancia y control de acceso.                
+            </p>
+            <p>
+                También participe en un servicio comunitario de informática
+                básica para niños, donde comparto conocimientos sobre el uso
+                de las computadoras y las herramientas digitales.
+            </p>
+        </section>
+
+       
+        <section>
+            <h2>Educación</h2>
+            <p>
+                Actualmente estudio la carrera de Técnico Superior Universitario
+                en Informática en el Instituto Universitario de Tecnología de
+                Administración Industrial (IUTA).
+            </p>
+            <p>
+                Mi formación me permite aprender sobre programación, sistemas
+                de información y herramientas informáticas.
+            </p>
+        </section>
+        <section class="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto</h2>
+            <p>Puedes escribirme usando este formulario.</p>
+            <p class="nota">Formulario para que me comentes tu opinion y cualquier observacion</p>
+            <form id="formulario-contacto" action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="100" required aria-describedby="error-nombre">
+                <span id="error-nombre" class="error"></span>
+
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" maxlength="254" required aria-describedby="error-correo">
+                <span id="error-correo" class="error"></span>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" maxlength="3000" required aria-describedby="error-mensaje"></textarea>
+                <span id="error-mensaje" class="error"></span>
+
+                <button type="submit">Enviar mensaje</button>
+                <p id="respuesta" role="status" aria-live="polite" aria-atomic="true"></p>
+            </form>
+            <noscript>Activa JavaScript para validar y enviar este formulario.</noscript>
+        </section>
+    </main>
+    <script src="contacto.js" defer></script>
+</body>
+</html>
